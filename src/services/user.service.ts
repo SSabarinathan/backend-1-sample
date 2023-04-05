@@ -8,6 +8,14 @@ class UserService {
   }
 }
 
+class NewUserService{
+  async newUser(data:any){
+    const newUser= await userDetails.insertMany(data);
+    return newUser;
+  }
+}
+
 export const userService = new UserService();
+export const newUserService=new NewUserService();
 
 //
